@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Photo Session</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      line-height: 1.7;
+    }
 
+    a {
+      color: #cfa36a;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url("photo1.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-size: 3rem;
+      letter-spacing: 0.1em;
+      text-align: center;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .place {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .place img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-list li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .cta {
+      text-align: center;
+      background-color: #000;
+      padding: 60px 10%;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 40px;
+      border: 1px solid #cfa36a;
+      color: #cfa36a;
+      letter-spacing: 0.1em;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #cfa36a;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .place {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1枚目：Wedding Photo（大きく表示） -->
+  <div class="hero">
+    <h1>Wedding Photo Session</h1>
+  </div>
+
+  <!-- Event Info -->
+  <section>
+    <h2 class="section-title">Event Details</h2>
+    <ul class="info-list">
+      <li>📅 <strong>Date</strong> : 2/23 (Mon) 12:00 – 15:00</li>
+      <li>📍 <strong>Place</strong> : Relax Bar 円山町</li>
+      <li>🎨 <strong>Dress Code</strong> : Orange</li>
+      <li>💰 <strong>Fee</strong> : ¥3,000</li>
+    </ul>
+  </section>
+
+  <!-- 2枚目：Place -->
+  <section>
+    <h2 class="section-title">Place</h2>
+    <div class="place">
+      <img src="photo2.jpg" alt="Place image">
+      <div>
+        <p>
+          落ち着いた空間で、洗練されたウエディングフォトを。  
+          円山町の隠れ家的バーで、特別な一日を写真に残します。
+        </p>
+        <p>
+          <a href="https://maps.app.goo.gl/kUd7vufw4JgoUzit7?g_st=ic" target="_blank">
+            → Google Mapsで見る
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3・4枚目：image -->
+  <section>
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery">
+      <img src="photo3.jpg" alt="Gallery image">
+      <img src="photo4.jpg" alt="Gallery image">
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <p>モダンでシックなウエディングフォト体験を。</p>
+    <a href="#">RESERVE</a>
+  </div>
+
+  <footer>
+    © Wedding Photo Session
+  </footer>
+
+</body>
+</html>
